@@ -1,6 +1,16 @@
 <?php
 
-include "GestionProject.php";
+// include "GestionProject.php";
+
+if (file_exists('./managers/GestionProject.php')) {
+	include './managers/GestionProject.php';
+} elseif (file_exists('../managers/GestionProject.php')) {
+	include '../managers/GestionProject.php';
+} else {
+	// Neither file exists, so handle the error here
+	echo "Error: Project.php not found in either directory.";
+}
+
 $gestionProject = new GestionProject();
 
 if(isset($_GET['Id_Project'])){
@@ -12,7 +22,7 @@ if(isset($_POST['modifier'])){
     $nom = $_POST['name'];
     $description = $_POST['description'];
     $gestionProject->Modifier($id,$nom,$description);
-    header('Location: index.php');
+    header('Location: ../index.php');
 }
 ?>
 <!DOCTYPE html>
@@ -21,7 +31,7 @@ if(isset($_POST['modifier'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="file.css">
+    <link rel="stylesheet" href="./style/file.css">
     <title>Modifier : </title>
 </head>
 <body>
@@ -47,7 +57,7 @@ if(isset($_POST['modifier'])){
     </div>
     <div>
         <input name="modifier" type="submit" value="Modifier">
-        <a href="index.php">Annuler</a>
+        <a href="../index.php">Annuler</a>
     </div>
 </form>
 </body>

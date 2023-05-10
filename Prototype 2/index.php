@@ -27,10 +27,12 @@ $projects = $GestionProject->RechercherTous();
             </tr>
             <?php
             foreach ($projects as $project) {
-                ?>
+            ?>
                 <tr>
                     <td>
-                        <?= $project->getNom() ?>
+                        <a href="./UI/tasks.php?id=<?php echo $project->getId() ?>">
+                            <?= $project->getNom() ?>
+                        </a>
                     </td>
                     <td>
                         <?= $project->getDescription() ?>

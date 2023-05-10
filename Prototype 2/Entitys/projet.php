@@ -2,18 +2,20 @@
 
 <?php
 
-class project {
+use project as GlobalProject;
 
-    private $Id_Project;
+ class project {
+
+    private $Id;
     private $name;
     private $description;
 
 
-    public function getId() {
-        return $this->Id_Project;
+    public function getId() { 
+        return $this->Id;
     }
-    public function setId($Id_Project) {
-        $this->Id_Project =$Id_Project;
+    public function setId($Id) {
+        $this->Id =$Id;
     }
 
     public function getNom() {
@@ -31,27 +33,7 @@ class project {
         $this->description = $description;
     }
 
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
-
-
-
 
 
 

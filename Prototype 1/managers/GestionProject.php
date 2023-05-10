@@ -1,5 +1,13 @@
 <?php
-include 'Projet.php';
+
+if (file_exists('./Entitys/projet.php')) {
+    include './Entitys/projet.php';
+} elseif (file_exists('../Entitys/projet.php')) {
+    include '../Entitys/projet.php';
+} else {
+    // Neither file exists, so handle the error here
+    echo "Error: projet.php not found in either directory.";
+}
 class GestionProject
 {
     private $Connection = Null;
@@ -33,7 +41,7 @@ class GestionProject
         $projects_data = mysqli_fetch_all($query, MYSQLI_ASSOC);
         $projects = array();
         foreach ($projects_data as $project_data) {
-            $project = new Project();
+            $project = new project();
             $project->setId($project_data['Id_Project']);
             $project->setNom($project_data['name']);
             $project->setDescription($project_data['description']);
