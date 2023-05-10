@@ -1,16 +1,16 @@
 <?php
 
-include "GestionEmployes.php";
+include "GestionProject.php";
 // Trouver tous les employés depuis la base de données 
-$gestionEmployes = new GestionEmployes();
-$employes = $gestionEmployes->RechercherTous();
+$gestionProject = new GestionProject();
+$projects = $gestionProject->RechercherTous();
 
 if(!empty($_POST)){
-	$employe = new Employe();
-	$employe->setNom($_POST['Nom']);
-	$employe->setPrenom($_POST['Prenom']);
-	$employe->setDateNaissance($_POST['DateNaissance']);
-	$gestionEmployes->Ajouter($employe);
+	$project = new  project();
+	$project-> setId($_POST['Id_Project']);
+	$project->setNom($_POST['name']);
+    $project->setDescription($_POST['description']);
+    $gestionProject->Ajouter($project );
 	
 	// Redirection vers la page index.php
 	header("Location: index.php");
@@ -24,29 +24,25 @@ if(!empty($_POST)){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-	<title>Gestion des employés</title>
+	<title>Gestion des projets</title>
 	
 </head>
 <body>
 
-<h1>Ajouter un employé</h1>
+<h1>Ajouter un projets</h1>
 
 <form method="post" action="">
 	<div>
 		<label for="Nom">Nom</label>
-		<input type="text" required="required" id="Nom" name="Nom" 
+		<input type="text" required="required" id="name" name="name" 
 		placeholder="Nom">
 	</div>
 	<div>
-		<label for="Prenom">Prénom</label>
-		<input type="text" required="required" id="Prenom" name="Prenom" 
-		placeholder="Prénom">
+		<label for="description">Description</label>
+		<input type="text" required="required" id="description" name="description" 
+		placeholder="Description">
 	</div>
-	<div>
-		<label for="DateNaissance">Date de naissance</label>
-		<input type="date" required="required" id="DateNaissance" 
-		name="DateNaissance" placeholder="Date de naissance">
-	</div>
+
 	<div>
 		<button type="submit">Ajouter</button>
 		<a href="index.php">Annuler</a>

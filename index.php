@@ -36,8 +36,8 @@ $projects = $GestionProject->RechercherTous();
                         <?= $project->getDescription() ?>
                     </td>
                     <td>
-                        <a href="editer.php?id=<?php echo $project->getId() ?>">Éditer</a>
-                        <a href="supprimer.php?id=<?php echo $project->getId() ?>">Supprime</a>
+                        <a href="edit.php?Id_Project=<?php echo $project->getId() ?>">Éditer</a>
+                        <a href="delet.php?Id_Project=<?php echo $project->getId() ?>">Supprimer</a>
                     </td>
                 </tr>
             <?php } ?>
