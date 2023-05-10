@@ -54,7 +54,7 @@ CREATE TABLE
     `project` (
         `Id_Project` int(11) NOT NULL,
         `name` varchar(50) NOT NULL,
-        `description` varchar(300) NOT NULL
+        `description` varchar(500) NOT NULL
     ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_general_ci;
 
 --
@@ -99,7 +99,7 @@ CREATE TABLE
     `task` (
         `Id_Task` int(11) NOT NULL,
         `name` varchar(50) NOT NULL,
-        `description` varchar(100) DEFAULT NULL,
+        `description` varchar(500) DEFAULT NULL,
         `Id_Project` int(11) NOT NULL
     ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_general_ci;
 
