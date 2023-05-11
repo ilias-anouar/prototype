@@ -31,7 +31,7 @@ class GestionTask
         $Name = $task->getNom();
         $Description = $task->getDescription();
         // requête SQL
-        $sql = "INSERT INTO `task`(`name`, `description`, `Id_Project`) VALUES ('$Name','$Description', '')";
+        $sql = "INSERT INTO `task`(`name`, `description`, `Id_Project`) VALUES ('$Name','$Description','$id')";
         mysqli_query($this->getConnection(), $sql);
     }
 
@@ -57,7 +57,7 @@ class GestionTask
         $result = mysqli_query($this->getConnection(), $sql);
         // Récupère une ligne de résultat sous forme de tableau associatif
         $task_data = mysqli_fetch_assoc($result);
-        $task = new Project();
+        $task = new Task();
         $task->setId($task_data['Id_Task']);
         $task->setNom($task_data['name']);
         $task->setDescription($task_data['description']);

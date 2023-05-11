@@ -1,13 +1,14 @@
 <?php
-
-if (file_exists('./Entitys/projet.php')) {
-    include './Entitys/projet.php';
-} elseif (file_exists('../Entitys/projet.php')) {
-    include '../Entitys/projet.php';
-} else {
-    // Neither file exists, so handle the error here
-    echo "Error: projet.php not found in either directory.";
-}
+define('__ROOT__', dirname(dirname(__FILE__)));
+require_once(__ROOT__ . '/Entity/projet.php');
+// if (file_exists('./Entitys/projet.php')) {
+//     include './Entitys/projet.php';
+// } elseif (file_exists('../Entitys/projet.php')) {
+//     include '../Entitys/projet.php';
+// } else {
+//     // Neither file exists, so handle the error here
+//     echo "Error: projet.php not found in either directory.";
+// }
 class GestionProject
 {
     private $Connection = Null;
