@@ -44,21 +44,22 @@ if (!empty($_POST)) {
 
 <body>
 
-	<h1>Ajouter un Task</h1>
+	<h1 class="text-center">Ajouter un Task</h1>
 
 	<form method="post" action="">
-		<div>
+		<div class="input-group mb-3">
 			<label for="Nom">Nom</label>
-			<input type="text" required="required" id="name" name="name" placeholder="Nom">
+			<input type="text" required="required" class="form-control" id="name" name="name" placeholder="Nom">
 		</div>
-		<div>
+		<div class="input-group mb-3">
 			<label for="description">Description</label>
-			<input type="text" required="required" id="description" name="description" placeholder="Description">
+			<input type="text" required="required" class="form-control" id="description" name="description" placeholder="Description">
 		</div>
 
+
 		<div>
-			<button type="submit" >Ajouter</button>
-			<a href="../index.php">Annuler</a>
+			<button   class="btn btn-primary" type="submit" >Ajouter</button>
+			<a   class="btn btn-info" href="../index.php">Annuler</a>
 		</div>
 	</form>
 </body>

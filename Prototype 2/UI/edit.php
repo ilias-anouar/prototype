@@ -38,7 +38,7 @@ if(isset($_POST['modifier'])){
 </head>
 <body>
 
-<h1>Modification de Projet : <?=$project->getNom() ?></h1>
+<h1 class="text-center">Modification de Projet : <?=$project->getNom() ?></h1>
 <form method="post" action="">
     <input type="hidden" required="required" 
         id="Id" name="Id_Project"   
@@ -58,7 +58,7 @@ if(isset($_POST['modifier'])){
         value=<?php echo $project->getDescription()?>>
     </div>
     <div>
-        <input  class="btn btn-wanrnig" name="modifier" type="submit" value="Modifier">
+        <input class="btn btn-primary" name="modifier" type="submit" value="Modifier">
         <a  class="btn btn-info" href="../index.php">Annuler</a>
     </div>
 </form>

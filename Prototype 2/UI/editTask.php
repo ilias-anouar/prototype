@@ -58,7 +58,7 @@ if(isset($_POST['modifier'])){
         value=<?php echo $tasks->getDescription()?>>
     </div>
     <div>
-        <input class="btn btn-danger" name="modifier" type="submit" value="Modifier">
+        <input class="btn btn-primary" name="modifier" type="submit" value="Modifier">
         <a  class="btn btn-info" href="tasks.php?id=<?php $id ?>">Annuler</a>
     </div>
 </form>
