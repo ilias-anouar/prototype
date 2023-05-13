@@ -59,7 +59,7 @@ if(isset($_POST['modifier'])){
     </div>
     <div>
         <input class="btn btn-primary" name="modifier" type="submit" value="Modifier">
-        <a  class="btn btn-info" href="tasks.php?id=<?php $id ?>">Annuler</a>
+        <a  class="btn btn-info" href="tasks.php?id=<?php echo $id_projet ?>">Annuler</a>
     </div>
 </form>
 </body>
