@@ -2,7 +2,6 @@
 
 <?php
 
-// use project as GlobalProject;
 
  class project {
 
