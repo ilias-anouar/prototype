@@ -1,6 +1,5 @@
 <?php
 
-// include "GestionProject.php";
 
 if (file_exists('./managers/GestionProject.php')) {
 	include './managers/GestionProject.php';

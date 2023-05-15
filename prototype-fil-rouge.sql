@@ -164,7 +164,7 @@ ALTER TABLE
 -- Contraintes pour la table `task`
 
 --
-
+ 
 ALTER TABLE `task`
 ADD
     CONSTRAINT `task_ibfk_1` FOREIGN KEY (`Id_Project`) REFERENCES `project` (`Id_Project`) ON DELETE CASCADE;
