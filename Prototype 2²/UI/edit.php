@@ -4,13 +4,15 @@
 
 
 
-define('__ROOT__', dirname(dirname(__FILE__)));
-require_once(__ROOT__ . '/managers/GestionClient.php');
+// define('__ROOT__', dirname(dirname(__FILE__)));
+// require_once(__ROOT__ . '/managers/GestionClient.php');
+include "../managers/GestionClient.php";
 
 $gestionClient = new GestionClient();
 
 if(isset($_GET['Id_client'])){
-    $client = $gestionClient->AllClientData()($_GET['Id_client']);
+    $id = $_GET['Id_client'];
+    $client = $gestionClient->ClientId($id);
 }
 
 if(isset($_POST['Edite'])){

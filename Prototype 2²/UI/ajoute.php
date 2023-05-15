@@ -3,8 +3,10 @@
 
 
 
-define('__ROOT__', dirname(dirname(__FILE__)));
-require_once(__ROOT__ . '/managers/GestionClient.php');
+// define('__ROOT__', dirname(dirname(__FILE__)));
+// require_once(__ROOT__ . '/managers/GestionClient.php');
+include "../managers/GestionClient.php";
+
 
 // Trouver tous les employés depuis la base de données 
 $gestionClient = new GestionClient();
