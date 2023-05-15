@@ -22,8 +22,8 @@ $Services = $GestionService->AllServices($id);
 
 <body>
     <div>
-        <!-- <h2>les taches de projet </h2> -->
-        <a class="btn btn-primary" href="./ajouteServices.php?id=<?php echo $id ?>">Ajouter un Task</a>
+        <h2 class="text-center">les Services  </h2>
+        <a class="btn btn-primary" href="./ajouteServices.php?id=<?php echo $id ?>">Ajouter un Service</a>
         <table class="table table-success table-striped table-hover" >
             <tr>
                 <th>Name</th>
