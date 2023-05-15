@@ -5,7 +5,7 @@
 
 
 define('__ROOT__', dirname(dirname(__FILE__)));
-require_once(__ROOT__ . '/Entitys/client.php');
+require_once(__ROOT__ . '/managers/GestionClient.php');
 
 $gestionClient = new GestionClient();
 
