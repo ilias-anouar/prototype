@@ -67,8 +67,7 @@ class GestionClient
     public function Edit($id, $nom, $email)
     {
         // Requête SQL 
-        $sql = "UPDATE client SET 
-        name='$nom', email='$email'    WHERE Id_client= $id";
+        $sql = "UPDATE client SET nom='$nom', email='$email'    WHERE Id_client= $id";
         //  
         mysqli_query($this->GetConnection(), $sql);
         //

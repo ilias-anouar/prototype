@@ -44,7 +44,7 @@ if (!empty($_POST)) {
 
 <body>
 
-	<h1 class="text-center">Ajouter un Task</h1>
+	<h1 class="text-center">Ajouter un Service</h1>
 
 	<form method="post" action="">
 		<div class="input-group mb-3">
