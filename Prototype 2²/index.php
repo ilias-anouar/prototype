@@ -1,5 +1,7 @@
 <?php
+// define('__ROOT__', dirname(dirname(__FILE__)));
 include "./managers/GestionClient.php";
+
 // Trouver tous les employés depuis la base de données 
 $GestionClient = new GestionClient();
 $Clients = $GestionClient->AllClientData();
@@ -21,7 +23,7 @@ $Clients = $GestionClient->AllClientData();
 
 <body>
     <div>
-        <a class="btn btn-primary" href="./UI/Ajoute.php">Ajouter un project</a>
+        <a class="btn btn-primary" href="./UI/Ajoute.php">Ajouter un Client</a>
         <table class="table table-success table-striped table-hover">
             <tr>
                 <th>Name</th>
@@ -41,8 +43,8 @@ $Clients = $GestionClient->AllClientData();
                         <?= $Client->Getemail() ?>
                     </td>
                     <td>
-                        <a class="btn btn-danger" href="./UI/edit.php?Id_Project=<?php echo $Client->GetID() ?>">Éditer</a>
-                      <a  class="btn btn-warning" href="./UI/delet.php?Id_Project=<?php echo $Client->GetID() ?>">delet</a>
+                        <a class="btn btn-danger" href="./UI/edit.php?Id_client=<?php echo $Client->GetID() ?>">Éditer</a>
+                      <a  class="btn btn-warning" href="./UI/delet.php?Id_client=<?php echo $Client->GetID() ?>">delet</a>
                         <a  class="btn btn-info" href="./UI/Services.php?id=<?php echo $Client->GetID() ?>">
                            Services
                         </a>

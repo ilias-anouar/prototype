@@ -4,8 +4,9 @@
 
 
 
-define('__ROOT__', dirname(dirname(__FILE__)));
-require_once(__ROOT__ . '/managers/GestionServices.php');
+// define('__ROOT__', dirname(dirname(__FILE__)));
+// require_once(__ROOT__ . '/managers/GestionServices.php');
+include "../managers/GestionServices.php";
 
 $GestionService= new GestionServices();
 
