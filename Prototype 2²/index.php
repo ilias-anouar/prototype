@@ -21,7 +21,7 @@ $Clients = $GestionClient->AllClientData();
 
 <body>
     <div>
-        <a class="btn btn-primary" href="./UI/Ajoute.php">Ajouter un project</a>
+        <a class="btn btn-primary" href="./UI/Ajoute.php">Ajouter un Client</a>
         <table class="table table-success table-striped table-hover">
             <tr>
                 <th>Name</th>

@@ -12,7 +12,7 @@ $GestionService= new GestionServices();
 if(isset($_GET['Id_srvice'])){
     $Services = $GestionService->ServiceParId($_GET['Id_srvice']);
 }
-$id_projet = $_GET['Id_client'];
+$id_client = $_GET['Id_client'];
 if(isset($_POST['Edite'])){
     $id = $_POST['Id_srvice'];
     $nom = $_POST['nom'];

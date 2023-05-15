@@ -27,7 +27,8 @@ $Services = $GestionService->AllServices($id);
         <table class="table table-success table-striped table-hover" >
             <tr>
                 <th>Name</th>
-                <th>Description</th>
+                <th>type</th>
+                <th>price</th>
                 <th>Action</th>
             </tr>
             <?php
@@ -38,7 +39,10 @@ $Services = $GestionService->AllServices($id);
                         <?= $Service->Getnom() ?>
                     </td>
                     <td>
-                        <?= $Service->Getemail() ?>
+                        <?= $Service->GetType() ?>
+                    </td>
+                    <td>
+                        <?= $Service->GetPrice() ?>
                     </td>
                     <td>
                         <a class="btn btn-warning" href="editServices.php?Id_srvice=<?php echo $Service->GetID() ?>&Id_client=<?php echo $id ?>">Éditer</a>
