@@ -38,3 +38,32 @@ $books = $books->fetchAll(PDO::FETCH_ASSOC);
         </ul>
     </nav>
 <?php }
+
+
+
+
+
+
+<?php
+$pageId = isset($_GET['pageId']) ? $_GET['pageId'] : 1;
+
+$itemsPerPage = 6; 
+
+$endIndex = $pageId * $itemsPerPage;
+$startIndex = $endIndex - $itemsPerPage;
+
+$sql = "SELECT * FROM `client` LIMIT $startIndex, $itemsPerPage"; 
+
+$result = $conn->query('SELECT COUNT(*) FROM client');
+$totalServices = $result->fetch_row()[0]; // 
+
+$pagesNum = ceil($totalServices / $itemsPerPage);
+
+$services = [];
+if ($result = $conn->query($sql)) {
+    while ($row = $result->fetch_assoc()) {
+        $services[] = $row;
+    }
+    $result->free();
+}
+?>
