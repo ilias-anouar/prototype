@@ -35,7 +35,7 @@ class GestionClient
         $query = mysqli_query($this->GetConnection(), $sql);
         $clients_data = mysqli_fetch_all($query, MYSQLI_ASSOC);
         $clients = array();
-        foreach (  $clients_data as $client_data) {
+        foreach ( $clients_data as $client_data) {
             $client= new client();
             $client->SetID($client_data['Id_client']);
             $client->Setnom($client_data['nom']);
@@ -52,8 +52,8 @@ class GestionClient
         // Récupère une ligne de résultat sous forme de tableau associatif
         $client_data = mysqli_fetch_assoc($result);
         $client = new client();
-        $client->setId($client_data['Id_client']);
-        $client->setNom($client_data['nom']);
+        $client->SetID($client_data['Id_client']);
+        $client->Setnom($client_data['nom']);
         $client->Setemail($client_data['email']);
         return   $client;
     }
@@ -67,8 +67,7 @@ class GestionClient
     public function Edit($id, $nom, $email)
     {
         // Requête SQL 
-        $sql = "UPDATE client SET 
-        name='$nom', email='$email'    WHERE Id_client= $id";
+        $sql = "UPDATE client SET nom='$nom', email='$email'    WHERE Id_client= $id";
         //  
         mysqli_query($this->GetConnection(), $sql);
         //

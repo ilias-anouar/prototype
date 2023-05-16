@@ -44,11 +44,11 @@ if (!empty($_POST)) {
 	<form method="post" action="">
 		<div class="input-group mb-3">
 			<label for="Nom">Nom</label>
-			<input type="text" required="required" class="form-control" id="name" name="name" placeholder="Nom">
+			<input type="text" required="required" class="form-control" id="name" name="nom" placeholder="Nom">
 		</div>
 		<div class="input-group mb-3">
 			<label for="email">email</label>
-			<input type="email" required="required" class="form-control" id="description" name="description" placeholder="Description">
+			<input type="email" required="required" class="form-control" id="email" name="email" placeholder="email">
 		</div>
 
 		<div>

@@ -40,7 +40,7 @@ class GestionServices
         $Services = array();
         foreach ($Services_data  as $service_data) {
             $service = new Services();
-            $service->SetID($service_data['Id_srvice	']);
+            $service->SetID($service_data['Id_srvice']);
             $service->Setnom($service_data['nom']);
             $service->SetType($service_data['type']);
             $service->SetPrice($service_data['price']);
