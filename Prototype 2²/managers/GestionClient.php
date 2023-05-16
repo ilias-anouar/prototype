@@ -31,7 +31,7 @@ class GestionClient
 
     public function AllClientData()
     {
-        $sql = 'SELECT * FROM client';
+        $sql = 'SELECT * FROM client ORDER BY `Id_client` DESC';
         $query = mysqli_query($this->GetConnection(), $sql);
         $clients_data = mysqli_fetch_all($query, MYSQLI_ASSOC);
         $clients = array();

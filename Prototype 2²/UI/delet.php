@@ -6,7 +6,6 @@
 include "../managers/GestionClient.php";
 
 if(isset($_GET['Id_client'])){
-
     // Trouver tous les employés depuis la base de données 
     $gestionClient= new GestionClient();
     $id = $_GET['Id_client'] ;

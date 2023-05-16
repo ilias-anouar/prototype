@@ -9,15 +9,14 @@
 // require_once(__ROOT__ . '/managers/GestionServices.php');
 include "../managers/GestionServices.php";
 
-
+//  get id client
 $id = $_GET['id'];
 // Trouver tous les employés depuis la base de données 
 $GestionService = new GestionServices();
-// $Services = $GestionService-> AllServices($id);
 
 if (!empty($_POST)) {
 	$Service = new Services();
-	$Service->SetID($id);
+		$Service->SetID($id);
 	$Service->Setnom($_POST['nom']);
 	$Service->SetType($_POST['type']);
 	$Service->SetPrice($_POST['price']);

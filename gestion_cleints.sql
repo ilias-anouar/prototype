@@ -38,7 +38,7 @@ CREATE TABLE `client` (
 -- Déchargement des données de la table `client`
 --
 
-INSERT INTO `client` (`Id_client`, `nom`, `email`, `password`) VALUES
+INSERT INTO `client`  (`Id_client`, `nom`, `email`, `password`) VALUES
 (1, 'mamado', 'mamado@gmail.com', '$2y$10$xYRniXHynSgPB55wBunuK.jamz87QKPUp7711gTr.tCDfV6nGK6A2'),
 (2, 'kamila', 'kamila@gmail.com', '$2y$10$AyEUZk7MZW4q/MESDbb5..hVLy61v3tXXkKzg5sEadFhUZ2L7vxpm'),
 (3, 'oranos', 'oranos@gmail.com', '$2y$10$MuF3MOn0Y7yyC0zpDlBrSesZ10EXAD4TABBq0qvwCtuooqKo2RUTq'),
@@ -117,7 +117,7 @@ ALTER TABLE `services`
 -- Contraintes pour la table `services`
 --
 ALTER TABLE `services`
-  ADD CONSTRAINT `services_ibfk_1` FOREIGN KEY (`Id_client`) REFERENCES `client` (`Id_client`);
+  ADD CONSTRAINT `services_ibfk_1` FOREIGN KEY (`Id_client`) REFERENCES `client` (`Id_client`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
