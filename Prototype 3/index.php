@@ -61,6 +61,7 @@ $Clients = $GestionClient->AllClientData();
 <script>
     <?php 
     include "./UI/js/script.js";
+    
    
    ?>
    </script>
