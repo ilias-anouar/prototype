@@ -23,7 +23,12 @@ $Clients = $GestionClient->AllClientData();
 
 <body>
     <div>
+
+    <div class="input-group ">
+        <input type="search" class="form-control-sm rounded " id="holder" placeholder="Search" aria-label="Search" aria-describedby="search-addon" >
+      </div>
         <a class="btn btn-primary" href="./UI/Ajoute.php">Ajouter un Client</a>
+
         <table class="table table-success table-striped table-hover">
             <tr>
                 <th>Name</th>
@@ -53,6 +58,12 @@ $Clients = $GestionClient->AllClientData();
             <?php } ?>
         </table>
     </div>
+<script>
+    <?php 
+    include "./UI/js/script.php";
+   
+   ?>
+   </script>
 </body>
 
 </html>
