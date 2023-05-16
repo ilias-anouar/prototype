@@ -19,7 +19,7 @@ if(isset($_POST['Edite'])){
     $nom = $_POST['nom'];
     $type = $_POST['type'];
  $price = $_POST['price'];
-    $GestionService->Edite($id,   $Name,  $type,  $price);
+    $GestionService->Edite($id,   $nom,  $type,  $price);
     header("Location: Services.php?id=".$id_client);
 }
 ?>
@@ -37,31 +37,31 @@ if(isset($_POST['Edite'])){
 </head>
 <body>
 
-<h1>Modification de Services : <?= $service->Getnom() ?></h1>
+<h1>Modification de Services : <?= $Services->Getnom() ?></h1>
 <form method="post" action="">
     <input type="hidden" required="required" 
         id="Id" name="Id_srvice"   
-        value=<?php echo $service->GetID()?> >
+        value=<?php echo $Services->GetID()?> >
 
     <div class="input-group mb-3">
         <label for="Nom">Nom</label>
         <input type="text" required="required" class="form-control"
         id="Nom" name="nom"  placeholder="Nom" 
-        value=<?php echo   $service->Getnom()?> >
+        value=<?php echo   $Services->Getnom()?> >
     </div>
   
     <div class="input-group mb-3">
         <label for="type">description</label>
         <input type="text" required="required"  class="form-control"
         id="type"  name="type" placeholder="type"
-        value=<?php echo   $service->GetType()?>>
+        value=<?php echo   $Services->GetType()?>>
     </div>
 
     <div class="input-group mb-3">
         <label for="price">price</label>
         <input type="number" required="required"  class="form-control"
         id="price"  name="price" placeholder="price"
-        value=<?php echo   $service->GetPrice()?>>
+        value=<?php echo   $Services->GetPrice()?>>
     </div>
     <div>
         <input class="btn btn-primary" name="Edite" type="submit" value="Edite">
