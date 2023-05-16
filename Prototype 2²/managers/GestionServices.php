@@ -72,7 +72,7 @@ class GestionServices
     public function Edite($id,   $Name,  $type,  $price)
     {
         // Requête SQL
-        $sql = "UPDATE services SET  name=' $Name', type='$type' , price=' $price'  WHERE Id_srvice= $id";
+        $sql = "UPDATE services SET  nom=' $Name', type='$type' , price=' $price'  WHERE Id_srvice= $id";
         //  
         mysqli_query($this->GetConnection(), $sql);
         //
